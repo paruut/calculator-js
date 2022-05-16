@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0e5ec;
+}
+.text{
+    font-size: 2em;
+    font-weight: 600;
+}
+h1:hover {
+    color: rgba(129, 5, 240, 1);
+    background: transparent;
+    box-shadow: none;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 0 1 30%;
+}
+
+.buttons,.result{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+}
+.result{
+    height: 3rem;
+    border: 1px solid rgb(0, 0, 0);
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 2em;
+    background: rgb(255, 27, 0);
+    background: linear-gradient(0deg, rgba(255, 27, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+    color:rgb(0, 0, 0);
+    padding:0 0.2em;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+.result:hover {
+    color: #f0094a;
+    background: transparent;
+    box-shadow: none;
+}
+
+.result:before,
+.result:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #f0094a;
+    box-shadow:
+        -1px -1px 5px 0px #fff,
+        7px 7px 20px 0px #0003,
+        4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.result:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.result:hover:before,
+.result:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+.button{
+    display:flex;
+    flex: 0 1 25%;
+    justify-content: center;
+    align-items: center;
+    height: 3.4rem;
+    border: 1px solid black;
+    border-top:none;
+    border-left:none;
+    cursor: pointer;
+    background: rgb(232, 232, 233);
+    background: linear-gradient(0deg, rgba(232, 232, 233, 1) 0%, rgb(174, 176, 194) 100%);
+    font-size: 2em;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+.button:hover {
+    background: rgb(221, 221, 221);
+    background: linear-gradient(0deg, rgb(201, 201, 206, 1) 0%, rgb(156, 159, 161, 1) 100%);
+}
+.button:nth-child(4n+1){
+    border-left: 1px solid black;
+}
+.button:nth-child(4n),.button:last-child{
+    background: rgb(96, 9, 240);
+    background: linear-gradient(0deg, rgba(96, 9, 240, 1) 0%, rgba(129, 5, 240, 1) 100%);
+    color: #fff;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+.button:nth-child(4n):before,
+.button:last-child:before {
+    height: 0%;
+    width: 2px;
+}
+
+.button:nth-child(4n):hover,
+.button:last-child:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+        -4px -4px 6px 0 rgba(116, 125, 136, .5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+.zero-btn{
+    flex-grow: 2;
+}
+.doubleBordered{
+    border: 2px solid black;
+}
